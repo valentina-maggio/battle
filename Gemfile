@@ -1,6 +1,9 @@
 source "https://rubygems.org"
 
-gem 'sinatra'
 gem 'rspec'
+gem 'sinatra'
 gem 'capybara'
-#gem 'webdrivers', '~> 5.0', require: false
+gem 'webrick'
+gem 'sinatra-contrib'
+gem 'rack'
+gem 'launchy'
