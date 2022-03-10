@@ -1,2 +1,5 @@
-<h1> <%= @player1%> attacks <%=@player2 %></h1>
+<h1> <%= @player1.name %> attacks <%= @player2.name %></h1>
 
+<form action="/ok" method="get">
+  <input type="submit" value="OK">
+</form>
