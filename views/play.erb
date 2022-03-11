@@ -3,7 +3,7 @@
 <% if @game.attacker == @game.player1 %>
 <h2> <%= @game.player1.name %>'s turn </h2>
 <% else %>
-<h1> <%= @game.player2.name %>'s turn </h2>
+<h2> <%= @game.player2.name %>'s turn </h2>
 <% end %>
 
 <h2> Player 1: <%= @game.player1.name %> - HP: <%= @game.player1.hit_points %></h2>
