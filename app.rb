@@ -11,7 +11,7 @@ class Battle < Sinatra::Base
   enable :sessions
 
   get '/' do
-    erb(:index)
+    erb :index
   end
 
   post '/names' do
@@ -23,19 +23,19 @@ class Battle < Sinatra::Base
   
   get '/play' do
     @game = $game
-    erb(:play)
+    erb :play
   end
 
   get '/attack' do
     @game = $game
     @game.attack(@game.opponent)
     @game.switch_turn
-    erb(:attack)
+    erb :attack
   end
 
   get '/ok' do
     @game = $game
-    erb(:play)
+    erb :play
   end
 
   run! if app_file == $0
