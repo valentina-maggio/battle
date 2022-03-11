@@ -1,8 +1,15 @@
 <h1> <%= @game.player1.name %> vs. <%= @game.player2.name %></h1>
 
+<% if @game.attacker == @game.player1 %>
+<h2> <%= @game.player1.name %>'s turn </h2>
+<% else %>
+<h1> <%= @game.player2.name %>'s turn </h2>
+<% end %>
+
+<h2> Player 1: <%= @game.player1.name %> - HP: <%= @game.player1.hit_points %></h2>
+<h2> Player 2: <%= @game.player2.name %> - HP: <%= @game.player2.hit_points %></h2>
+
 <form action="/attack">
   <input type="submit" value="Attack">
 </form>
-
-<h2> Player 2: <%= @game.player2.name %> - HP: <%= @game.player2.hit_points %></h2>
 

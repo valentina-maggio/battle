@@ -1,8 +1,8 @@
 feature 'Attack move' do
   scenario 'player 1 can attack and get confirmation' do
-   p sign_in_and_play
+    sign_in_and_play
     click_button 'Attack'
-    expect(page).to have_content 'Hal attacks Valentina'
+    expect(page).to have_content 'Hal attacked Valentina'
   end
 
   scenario 'reduce player 2 HP by 10' do

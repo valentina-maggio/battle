@@ -1,4 +1,8 @@
-<h1> <%= @game.player1.name %> attacks <%= @game.player2.name %></h1>
+<% if @game.attacker == @game.player1 %>
+<h1> <%= @game.player2.name %> attacked <%= @game.player1.name %> </h1>
+<% else %>
+<h1> <%= @game.player1.name %> attacked <%= @game.player2.name %> </h1>
+<% end %>
 
 <form action="/ok" method="get">
   <input type="submit" value="OK">
