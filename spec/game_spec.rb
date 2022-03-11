@@ -36,4 +36,18 @@ describe Game do
       expect(game.attacker).to eq player2
     end
   end
+
+  describe '#game_over?' do
+    it 'returns false if both players still have remaining HPs' do
+      allow(player1).to receive(:hit_points).and_return(20)
+      allow(player2).to receive(:hit_points).and_return(20)
+      expect(game.game_over?).to eq false
+    end
+
+    it 'returns true if one player has 0 HPs' do
+      allow(player1).to receive(:hit_points).and_return(0)
+      allow(player2).to receive(:hit_points).and_return(20)
+      expect(game.game_over?).to eq true
+    end
+  end
 end

@@ -26,6 +26,10 @@ class Game
     @opponent = opponent_of(opponent)
   end
 
+  def game_over?
+    @attacker.hit_points <= 0 || @opponent.hit_points <= 0 
+  end
+
   private
 
   def opponent_of(the_player)
